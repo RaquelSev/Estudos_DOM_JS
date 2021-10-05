@@ -4,7 +4,7 @@ const criarTarefa = (evento) => {
 
     const lista = document.querySelector('[data-list]')
 
-    const input = document.querySelector("[data-form-input]");
+    const input = document.querySelector('[data-form-input]');
     const valor = input.value;
 
     const tarefa = document.createElement('li');
@@ -17,12 +17,18 @@ const criarTarefa = (evento) => {
     input.value = " ";
 }
 
-const novaTarefa = document.querySelector("[data-form-button]");
+const novaTarefa = document.querySelector('[data-form-button]');
 
 
-novaTarefa.addEventListener("click", criarTarefa);
+novaTarefa.addEventListener('click', criarTarefa);
 
 const BotaoConclui = () => {
-    const botaoConclui = document.createElement("button");
+    const botaoConclui = document.createElement('button');
+
+    botaoConclui.addEventListener('click', () => {
+        console.log('Fui clicado');
+    })
+
+    return botaoConclui;
 }
 
